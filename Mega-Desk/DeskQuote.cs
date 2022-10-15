@@ -10,7 +10,7 @@ namespace Mega_Desk_Hampton
     public class DeskQuote : Desk
     {
         // gets path from the "bin/debug" folder
-        public const string RushPriceFile = "rushOrderPrices.txt";
+        public const string RushPriceFile = "../../rushOrderPrices.txt";
 
         public const int BasePrice = 200;
         public const int CostPerIn = 1;
@@ -34,7 +34,6 @@ namespace Mega_Desk_Hampton
         {
             int row = 0;
             int column = 0;
-            
             
             var lines = File.ReadLines(RushPriceFile);
 
