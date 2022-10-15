@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.IsolatedStorage; //https://learn.microsoft.com/en-us/dotnet/standard/io/how-to-read-and-write-to-files-in-isolated-storage
 using Newtonsoft.Json; //https://stackoverflow.com/questions/33081102/json-add-new-object-to-existing-json-file-c-sharp
-using System.Text.RegularExpressions; //https://stackoverflow.com/questions/4140723/how-to-remove-new-line-characters-from-a-string
 
 namespace Mega_Desk_Hampton
 {
@@ -30,7 +29,9 @@ namespace Mega_Desk_Hampton
                 using (StreamReader reader = new StreamReader(isoStream))
                 {
                     objData = reader.ReadToEnd();
-                    string objDataSanitized = Regex.Replace(objData, @"\t|\n|\r", "");
+                    string objDataSanitized = objData.Replace("\n", string.Empty);
+                    objDataSanitized = objDataSanitized.Replace("\r", string.Empty);
+                    objDataSanitized = objDataSanitized.Replace("\t", string.Empty);
                     if (objDataSanitized != "Nothing in this file")
                     {
                         quoteList = JsonConvert.DeserializeObject<List<DeskQuote>>(objData);

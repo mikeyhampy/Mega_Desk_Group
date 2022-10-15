@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.IO;
 using System.IO.IsolatedStorage; //https://learn.microsoft.com/en-us/dotnet/standard/io/how-to-read-and-write-to-files-in-isolated-storage
 using Newtonsoft.Json; //https://stackoverflow.com/questions/33081102/json-add-new-object-to-existing-json-file-c-sharp
-using System.Text.RegularExpressions; //https://stackoverflow.com/questions/4140723/how-to-remove-new-line-characters-from-a-string
 
 namespace Mega_Desk_Hampton
 {
@@ -23,6 +22,8 @@ namespace Mega_Desk_Hampton
             InitializeComponent();
 
             string objData = "";
+
+            
             IsolatedStorageFile isoStore = IsolatedStorageFile.GetStore(IsolatedStorageScope.User | IsolatedStorageScope.Assembly, null, null);
             if (isoStore.FileExists("quotes.json"))
             {
@@ -32,7 +33,9 @@ namespace Mega_Desk_Hampton
                     {
                         objData = reader.ReadToEnd();
                         Console.WriteLine(objData);
-                        string objDataSanitized = Regex.Replace(objData, @"\t|\n|\r", "");
+                        string objDataSanitized = objData.Replace("\n", string.Empty);
+                        objDataSanitized = objDataSanitized.Replace("\r", string.Empty);
+                        objDataSanitized = objDataSanitized.Replace("\t", string.Empty);
                         if (objDataSanitized != "Nothing in this file")
                         {
                             quoteList = JsonConvert.DeserializeObject<List<DeskQuote>>(objData);
@@ -48,7 +51,7 @@ namespace Mega_Desk_Hampton
                         writer.WriteLine("Nothing in this file");
                     }
                 }
-            }
+            } 
         }
 
         private void Form1_Load(object sender, EventArgs e)
