@@ -39,6 +39,8 @@ namespace Mega_Desk_Hampton
                     }
                 }
             }
+
+            generate_quotes();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -95,7 +97,7 @@ namespace Mega_Desk_Hampton
 
         private void ViewAllQuotes_Load(object sender, EventArgs e)
         {
-            generate_quotes();
+            
 
         }
 
