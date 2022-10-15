@@ -16,6 +16,7 @@ namespace Mega_Desk_Hampton
         public const int CostPerIn = 1;
         public const int CostPerDrawer = 50;
         public int[,] RushPrice = new int[3,3];
+        public DateTime quoteDate = DateTime.Now;
 
         // get from user
         public string CustomerName;
@@ -135,6 +136,12 @@ namespace Mega_Desk_Hampton
 
             // calc total or final cost
             FinalPrice = BasePrice + ShipPrice + SurfaceMaterialPrice + DrawerCost + SurfaceAreaPrice;
+        }
+
+        public override string ToString()
+        {
+            // choose any format that suits you and display what you like
+            return $"Name: {CustomerName} - Total: {FinalPrice} - Date: {quoteDate}";
         }
     }
 }
