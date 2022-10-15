@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Mega_Desk_Hampton
 {
     public class DeskQuote : Desk
     {
+        // gets path from the "bin/debug" folder
+        public const string RushPriceFile = "rushOrderPrices.txt";
+
         public const int BasePrice = 200;
         public const int CostPerIn = 1;
         public const int CostPerDrawer = 50;
+        public int[,] RushPrice = new int[3,3];
 
         // get from user
         public string CustomerName;
@@ -26,62 +31,69 @@ namespace Mega_Desk_Hampton
         // calculate shipping cost
         public void CalcShippingCost()
         {
-            int dayCost = 0;
-            int surfaceCost = 0;
+            int row = 0;
+            int column = 0;
+            
+            
+            var lines = File.ReadLines(RushPriceFile);
+
+            foreach (var line in lines)
+            {
+                int lineInt = int.Parse(line.Trim());
+                RushPrice[row,column] = lineInt;
+                column++;
+                if (column == 3)
+                {
+                    row++;
+                    column = 0;
+                }
+            }
 
 
             // check base shipping cost by day
             // check for surface area cost added
 
-            // standard shipping (14 day)
-            if (DaysShip == 14)
-            {
-                dayCost = 0;
-                surfaceCost = 0;
-            }
-
             // 7 day shipping
-            else if (DaysShip == 7)
+            if (DaysShip == 7)
             {
-                dayCost = 30;
-                if (SurfaceArea > 2000)
-                {
-                    surfaceCost = 10;
-                } else if (SurfaceArea >= 1000)
-                {
-                    surfaceCost = 5;
-                }
-
+                row = 2;
             }
 
             // 5 day shipping
             else if (DaysShip == 5)
             {
-                dayCost = 40;
-                if (SurfaceArea > 2000)
-                {
-                    surfaceCost = 20;
-                }
-                else if (SurfaceArea >= 1000)
-                {
-                    surfaceCost = 10;
-                }
+                row = 1;
             }
 
             // 3 day shipping
             else if (DaysShip == 3)
             {
-                dayCost = 60;
-                if (SurfaceArea > 2000)
-                {
-                    surfaceCost = 20;
-                }
-                else if (SurfaceArea >= 1000)
-                {
-                    surfaceCost = 10;
-                }
+                row = 0;
             }
-            ShipPrice = dayCost + surfaceCost;
+
+            // take surface area  into account
+            if (SurfaceArea > 2000)
+            {
+                column = 2;
+            }
+            else if (SurfaceArea >= 1000)
+            {
+                column = 1;
+            }
+            else
+            {
+                column = 0;
+            }
+            
+            // output shipping price
+            if (DaysShip == 14)
+            {
+                ShipPrice = 0;
+            }
+            else
+            {
+                ShipPrice = RushPrice[row, column];
+            }
         }
 
         // calc surface cost
