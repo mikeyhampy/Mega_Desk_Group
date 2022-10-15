@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.IO.IsolatedStorage;
 
 namespace Mega_Desk_Hampton
 {
@@ -100,6 +102,11 @@ namespace Mega_Desk_Hampton
                 displayQuote.Show(this);
                 Hide();
             }
+        }
+
+        private void AddQuote_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
