@@ -19,6 +19,7 @@ namespace Mega_Desk_Hampton
         public ViewAllQuotes()
         {
             InitializeComponent();
+            generate_quotes();
 
             string objData = "";
             IsolatedStorageFile isoStore = IsolatedStorageFile.GetStore(IsolatedStorageScope.User | IsolatedStorageScope.Assembly, null, null);
@@ -49,6 +50,35 @@ namespace Mega_Desk_Hampton
         {
             var mainMenu = (MainMenu)Tag;
             mainMenu.Show();
+        }
+
+        /**
+         * generate_quotes method
+         * Purpose: To display quote information from JSON file 
+         */
+        public void generate_quotes()
+        {
+
+            //This is just a placeholder for when we get the JSON data. 
+            // I was thinking initially we could just show the quote NAME, AMOUNT AND DATE and then
+            // the viewDetailsbtn button could pull up the DisplayQuote form with all the additional information
+            // for the selected AddQuote object (the viewDetailsbtn click event is found just below this method).
+            // please let me know if this was confusing, or if you have a better idea
+            for (int i = 1; i < 4; i++)
+            {
+                quotesBox.Items.Add($"Quote {i}");
+            }
+            
+        }
+        /**
+         * viewDetailsBtn on click event
+         * Purpose: to allow the user to see all the quote details from the selected quote
+         */
+        private void viewDetailsBtn_Click(object sender, EventArgs e)
+        {
+            var select = quotesBox.SelectedItem.ToString();
+
+            MessageBox.Show("This is a placeholder, we can instead pull up the DisplayQuote form to show all additional information", select);
         }
 
         private void ViewAllQuotes_Load(object sender, EventArgs e)
