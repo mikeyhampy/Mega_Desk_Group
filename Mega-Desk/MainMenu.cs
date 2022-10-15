@@ -80,6 +80,8 @@ namespace Mega_Desk_Hampton
             searchQuotes.Tag = this;
             searchQuotes.Show(this);
             Hide();
+
+
         }
 
         private void Exit(object sender, EventArgs e)
