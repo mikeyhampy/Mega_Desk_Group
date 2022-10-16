@@ -10,12 +10,13 @@ namespace Mega_Desk_Hampton
     public class DeskQuote : Desk
     {
         // gets path from the "bin/debug" folder
-        public const string RushPriceFile = "rushOrderPrices.txt";
+        public const string RushPriceFile = "../../rushOrderPrices.txt";
 
         public const int BasePrice = 200;
         public const int CostPerIn = 1;
         public const int CostPerDrawer = 50;
         public int[,] RushPrice = new int[3,3];
+        public DateTime quoteDate = DateTime.Now;
 
         // get from user
         public string CustomerName;
@@ -33,7 +34,6 @@ namespace Mega_Desk_Hampton
         {
             int row = 0;
             int column = 0;
-            
             
             var lines = File.ReadLines(RushPriceFile);
 
@@ -135,6 +135,12 @@ namespace Mega_Desk_Hampton
 
             // calc total or final cost
             FinalPrice = BasePrice + ShipPrice + SurfaceMaterialPrice + DrawerCost + SurfaceAreaPrice;
+        }
+
+        public override string ToString()
+        {
+            // choose any format that suits you and display what you like
+            return $"Name: {CustomerName} - Total: {FinalPrice} - Date: {quoteDate}";
         }
     }
 }

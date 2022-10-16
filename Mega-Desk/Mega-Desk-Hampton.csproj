@@ -57,8 +57,14 @@
     </Compile>
     <Compile Include="Desk.cs" />
     <Compile Include="DeskQuote.cs" />
-    <Compile Include="DeskQuoteTableItem.cs" />
-    <Compile Include="DisplayQuote.cs">
+    <Compile Include="DisplayDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayDetails.Designer.cs">
+      <DependentUpon>DisplayDetails.cs</DependentUpon>
+    </Compile>
+	  <Compile Include="DeskQuoteTableItem.cs" />
+	  <Compile Include="DisplayQuote.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DisplayQuote.Designer.cs">
@@ -86,6 +92,9 @@
     </Compile>
     <EmbeddedResource Include="AddQuote.resx">
       <DependentUpon>AddQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayDetails.resx">
+      <DependentUpon>DisplayDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisplayQuote.resx">
       <DependentUpon>DisplayQuote.cs</DependentUpon>
