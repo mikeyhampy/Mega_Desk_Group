@@ -48,9 +48,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 4);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
@@ -60,7 +62,8 @@
             // 
             this.CustomerName.AutoSize = true;
             this.CustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CustomerName.Location = new System.Drawing.Point(268, 58);
+            this.CustomerName.Location = new System.Drawing.Point(269, 125);
+            this.CustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CustomerName.Name = "CustomerName";
             this.CustomerName.Size = new System.Drawing.Size(68, 25);
             this.CustomerName.TabIndex = 1;
@@ -70,7 +73,8 @@
             // 
             this.MaterialCost.AutoSize = true;
             this.MaterialCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaterialCost.Location = new System.Drawing.Point(268, 143);
+            this.MaterialCost.Location = new System.Drawing.Point(269, 200);
+            this.MaterialCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaterialCost.Name = "MaterialCost";
             this.MaterialCost.Size = new System.Drawing.Size(139, 25);
             this.MaterialCost.TabIndex = 2;
@@ -80,7 +84,8 @@
             // 
             this.TotalCost.AutoSize = true;
             this.TotalCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalCost.Location = new System.Drawing.Point(309, 373);
+            this.TotalCost.Location = new System.Drawing.Point(208, 487);
+            this.TotalCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.TotalCost.Name = "TotalCost";
             this.TotalCost.Size = new System.Drawing.Size(110, 25);
             this.TotalCost.TabIndex = 3;
@@ -90,7 +95,8 @@
             // 
             this.DrawerCost.AutoSize = true;
             this.DrawerCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DrawerCost.Location = new System.Drawing.Point(268, 205);
+            this.DrawerCost.Location = new System.Drawing.Point(269, 277);
+            this.DrawerCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DrawerCost.Name = "DrawerCost";
             this.DrawerCost.Size = new System.Drawing.Size(130, 25);
             this.DrawerCost.TabIndex = 4;
@@ -100,7 +106,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(87, 58);
+            this.label1.Location = new System.Drawing.Point(28, 125);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 25);
             this.label1.TabIndex = 5;
@@ -110,7 +117,8 @@
             // 
             this.MaterialLabel.AutoSize = true;
             this.MaterialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaterialLabel.Location = new System.Drawing.Point(87, 143);
+            this.MaterialLabel.Location = new System.Drawing.Point(28, 200);
+            this.MaterialLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MaterialLabel.Name = "MaterialLabel";
             this.MaterialLabel.Size = new System.Drawing.Size(154, 25);
             this.MaterialLabel.TabIndex = 6;
@@ -120,7 +128,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(174, 373);
+            this.label3.Location = new System.Drawing.Point(28, 487);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 25);
             this.label3.TabIndex = 7;
@@ -130,7 +139,8 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(87, 205);
+            this.label4.Location = new System.Drawing.Point(28, 277);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 25);
             this.label4.TabIndex = 8;
@@ -140,7 +150,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(419, 143);
+            this.label2.Location = new System.Drawing.Point(480, 201);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 25);
             this.label2.TabIndex = 9;
@@ -150,7 +161,8 @@
             // 
             this.ShippingCost.AutoSize = true;
             this.ShippingCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShippingCost.Location = new System.Drawing.Point(622, 143);
+            this.ShippingCost.Location = new System.Drawing.Point(740, 201);
+            this.ShippingCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ShippingCost.Name = "ShippingCost";
             this.ShippingCost.Size = new System.Drawing.Size(146, 25);
             this.ShippingCost.TabIndex = 10;
@@ -160,7 +172,8 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(419, 205);
+            this.label5.Location = new System.Drawing.Point(480, 277);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(193, 25);
             this.label5.TabIndex = 11;
@@ -170,7 +183,8 @@
             // 
             this.SurfaceCost.AutoSize = true;
             this.SurfaceCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SurfaceCost.Location = new System.Drawing.Point(622, 205);
+            this.SurfaceCost.Location = new System.Drawing.Point(740, 277);
+            this.SurfaceCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SurfaceCost.Name = "SurfaceCost";
             this.SurfaceCost.Size = new System.Drawing.Size(132, 25);
             this.SurfaceCost.TabIndex = 12;
@@ -180,7 +194,8 @@
             // 
             this.BasePrice.AutoSize = true;
             this.BasePrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BasePrice.Location = new System.Drawing.Point(268, 275);
+            this.BasePrice.Location = new System.Drawing.Point(269, 363);
+            this.BasePrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BasePrice.Name = "BasePrice";
             this.BasePrice.Size = new System.Drawing.Size(116, 25);
             this.BasePrice.TabIndex = 13;
@@ -190,7 +205,8 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(87, 275);
+            this.label6.Location = new System.Drawing.Point(28, 363);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 25);
             this.label6.TabIndex = 14;
@@ -199,9 +215,10 @@
             // Submit
             // 
             this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Submit.Location = new System.Drawing.Point(490, 364);
+            this.Submit.Location = new System.Drawing.Point(449, 476);
+            this.Submit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(122, 42);
+            this.Submit.Size = new System.Drawing.Size(163, 52);
             this.Submit.TabIndex = 15;
             this.Submit.Text = "Submit";
             this.Submit.UseVisualStyleBackColor = true;
@@ -209,9 +226,9 @@
             // 
             // DisplayQuote
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(918, 599);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BasePrice);
@@ -228,6 +245,7 @@
             this.Controls.Add(this.MaterialCost);
             this.Controls.Add(this.CustomerName);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisplayQuote_FormClosed);

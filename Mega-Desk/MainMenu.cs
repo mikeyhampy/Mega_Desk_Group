@@ -21,10 +21,8 @@ namespace Mega_Desk_Hampton
         {
             InitializeComponent();
 
-
             string objData = "";
 
-            
             IsolatedStorageFile isoStore = IsolatedStorageFile.GetStore(IsolatedStorageScope.User | IsolatedStorageScope.Assembly, null, null);
             if (isoStore.FileExists("quotes.json"))
             {
