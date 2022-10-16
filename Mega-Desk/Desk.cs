@@ -8,6 +8,14 @@ using System.Threading.Tasks;
 
 namespace Mega_Desk_Hampton
 {
+    public enum DesktopMaterial
+    {
+        Oak,
+        Laminate,
+        Pine,
+        Rosewood,
+        Veneer
+    }
     public class Desk
     {
         public int Width;

@@ -57,6 +57,7 @@
     </Compile>
     <Compile Include="Desk.cs" />
     <Compile Include="DeskQuote.cs" />
+    <Compile Include="DeskQuoteTableItem.cs" />
     <Compile Include="DisplayQuote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +109,10 @@
       <DependentUpon>ViewAllQuotes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\DeskQuote.datasource" />
+    <None Include="Properties\DataSources\DeskQuoteTableItem.datasource" />
+    <None Include="Properties\DataSources\Mega_Desk_Hampton.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Mega_Desk_Hampton.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
